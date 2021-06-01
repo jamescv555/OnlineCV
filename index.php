@@ -52,12 +52,15 @@
           <div class="h2 title">Anthony Barnett</div>
           <p class="category text-white">Web Developer, Graphic Designer,  Photographer</p><a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Hire Me</a><a class="btn btn-primary" href="#" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
           <?php
-            require('./src/VisitorTracking.php');
+
+            include 'src/VisitorTracking.php';
             
             $visitor = new VisitorTracking;
             $visitor->ip;
             
             echo $ip;
+
+			var_dump($visitor->city . ' ' . $visitor->country, $visitor->__toArray());
             
           ?>
         </div>
